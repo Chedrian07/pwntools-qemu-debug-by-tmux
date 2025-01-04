@@ -253,13 +253,6 @@ else:
     print("Invalid argument. Use 'r' to run or 'gdb' to debug.")
     sys.exit(1)
 
-# ---------------------------------------------------
-# 5) Pwntools Interactive (Left Pane)
-# ---------------------------------------------------
-def recv_main(num):
-    r.recvuntil(b'>> ')
-    r.sendline(str(num).encode())
-
 r.interactive()
 EOF
 
